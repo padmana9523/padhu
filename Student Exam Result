@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+class Student {
+    void displayRoll(int rollNumber) {
+        System.out.println("Roll no:" + rollNumber);
+    }
+}
+
+class Exam extends Student {
+    String checkResult(int marks) {
+        if (marks > 50) {
+            return "Pass";
+        } else {
+            return "Fail";
+        }
+    }
+}
+
+class Result extends Exam {
+    void showResult(int rollNumber, int marks) {
+        displayRoll(rollNumber);
+        System.out.println("Result:" + checkResult(marks));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int rollNumber = sc.nextInt();
+        int marks = sc.nextInt();
+        sc.close();
+
+        Result r = new Result();
+        r.showResult(rollNumber, marks);
+    }
+}
