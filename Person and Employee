@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+    class employee{
+        void Name(String str){
+            System.out.println("Name:"+str);
+        }
+    }
+    class Payment extends employee{
+        void Money(double n){
+            System.out.println("Salary:"+n);
+        }
+    }
+    public class main{
+
+     public static void main(String[] args) {
+         Scanner s=new Scanner(System.in);
+         String str=s.nextLine();
+         double n=s.nextDouble();
+         Payment obj=new Payment();
+         obj.Name(str);
+         obj.Money(n);
+    }
+}
