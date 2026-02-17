@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+   
+    static String removeDuplicates(String str, String result) {
+        if (str.length() == 0) {
+            return result;
+        }
+
+        char ch = str.charAt(0);
+
+        if (result.indexOf(ch) == -1) {
+            result += ch;
+        }
+
+        return removeDuplicates(str.substring(1), result);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        sc.close();
+
+        String result = removeDuplicates(str, "");
+        System.out.println(result);
+    }
+}
