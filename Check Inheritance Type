@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+ class Parent {
+     void name(){
+         System.out.println("Parent");
+     }
+ }
+class Child extends Parent{
+    void voice(){
+        System.out.println("Child");
+    }
+}
+public class main{
+    public static void main(String[] args) {
+        Child a=new Child();
+        a.name();
+        a.voice();
+    }
+}
